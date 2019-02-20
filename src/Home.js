@@ -1,44 +1,6 @@
 import React, { Component } from 'react';
-import { Box, Heading, TextInput, Grid } from 'grommet';
-
-const groups = [
-  { name: "LOL1" },
-  { name: "LOL2" },
-  { name: "LOL3" },
-  { name: "LOL4" },
-  { name: "LOL5" },
-  { name: "LOL6" },
-  { name: "LOL7" },
-  { name: "LOL8" },
-  { name: "LOL9" },
-  { name: "LOL1" },
-  { name: "LOL2" },
-  { name: "LOL3" },
-  { name: "LOL4" },
-  { name: "LOL5" },
-  { name: "LOL6" },
-  { name: "LOL7" },
-  { name: "LOL8" },
-  { name: "LOL9" },
-  { name: "LOL1" },
-  { name: "LOL2" },
-  { name: "LOL3" },
-  { name: "LOL4" },
-  { name: "LOL5" },
-  { name: "LOL6" },
-  { name: "LOL7" },
-  { name: "LOL8" },
-  { name: "LOL9" },
-  { name: "LOL1" },
-  { name: "LOL2" },
-  { name: "LOL3" },
-  { name: "LOL4" },
-  { name: "LOL5" },
-  { name: "LOL6" },
-  { name: "LOL7" },
-  { name: "LOL8" },
-  { name: "LOL9" },
-];
+import { Box, Heading, TextInput } from 'grommet';
+import { Query } from 'urql';
 
 class Home extends Component {
   render() {
@@ -52,7 +14,7 @@ class Home extends Component {
           alignSelf="center"
           color="brand"
         >
-          {process.env.SITE_NAME}
+          {process.env.REACT_APP_SITE_NAME}
         </Heading>
         <Box
           style={{
@@ -73,26 +35,37 @@ class Home extends Component {
             >
             </TextInput>
           </Box>
-          <Box
-            animation="slideUp"
-            gap="large"
-            pad="large"
-          >
-              {
-                groups.map((group) => (
+          <Query query="{ groups { telegramId name } }">
+            {
+              ({ fetching, data }) => {
+                if (fetching || !data) {
+                  return (null);
+                }
+                return (
                   <Box
-                    key={group.name}
-                    border="bottom"
+                    animation="slideUp"
+                    gap="large"
+                    pad="large"
                   >
-                    <Heading
-                      level={5}
-                    >
-                      {group.name}
-                    </Heading>
+                    {
+                      data.groups.map((group) => (
+                        <Box
+                          key={group.name}
+                          border="bottom"
+                        >
+                          <Heading
+                            level={5}
+                          >
+                            {group.name}
+                          </Heading>
+                        </Box>
+                      ))
+                    }
                   </Box>
-                ))
+                )
               }
-          </Box>
+            }
+          </Query>
         </Box>
       </Box>
     );

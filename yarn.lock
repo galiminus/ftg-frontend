@@ -1689,6 +1689,10 @@ browserslist@4.4.1, browserslist@^4.0.0, browserslist@^4.3.4, browserslist@^4.3.
     electron-to-chromium "^1.3.103"
     node-releases "^1.1.3"
 
+bs-rebel@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/bs-rebel/-/bs-rebel-0.2.3.tgz#11e1a95a4a3f16311575e8853a004cec6b9d19de"
+
 bser@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/bser/-/bser-2.0.0.tgz#9ac78d3ed5d915804fd87acb158bc797147a1719"
@@ -2206,6 +2210,13 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     ripemd160 "^2.0.0"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
+
+create-react-context@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.3.tgz#9ec140a6914a22ef04b8b09b7771de89567cb6f3"
+  dependencies:
+    fbjs "^0.8.0"
+    gud "^1.0.0"
 
 cross-spawn@6.0.5, cross-spawn@^6.0.0, cross-spawn@^6.0.5:
   version "6.0.5"
@@ -3292,7 +3303,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.1:
+fbjs@^0.8.0, fbjs@^0.8.1:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   dependencies:
@@ -3682,6 +3693,12 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   version "4.1.15"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
 
+graphql@^14.1.1:
+  version "14.1.1"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.1.1.tgz#d5d77df4b19ef41538d7215d1e7a28834619fac0"
+  dependencies:
+    iterall "^1.2.2"
+
 grommet-icons@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/grommet-icons/-/grommet-icons-4.2.0.tgz#7bcf7d4b37f694516ade084e2536c72b224c6a76"
@@ -3710,6 +3727,10 @@ grommet@^2.4.0:
 growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
+
+gud@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
 
 gzip-size@5.0.0:
   version "5.0.0"
@@ -4572,6 +4593,10 @@ istanbul-reports@^1.5.1:
   resolved "https://registry.yarnpkg.com/istanbul-reports/-/istanbul-reports-1.5.1.tgz#97e4dbf3b515e8c484caea15d6524eebd3ff4e1a"
   dependencies:
     handlebars "^4.0.3"
+
+iterall@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.2.2.tgz#92d70deb8028e0c39ff3164fdbf4d8b088130cd7"
 
 jest-changed-files@^23.4.2:
   version "23.4.2"
@@ -8451,6 +8476,13 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
+urql@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/urql/-/urql-1.0.3.tgz#bca8e19e1a55b852ae07c1b44d970481532d01cc"
+  dependencies:
+    create-react-context "^0.2.3"
+    wonka "^2.0.1"
+
 use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
@@ -8742,6 +8774,12 @@ wide-align@^1.1.0:
   resolved "https://registry.yarnpkg.com/wide-align/-/wide-align-1.1.3.tgz#ae074e6bdc0c14a431e804e624549c633b000457"
   dependencies:
     string-width "^1.0.2 || 2"
+
+wonka@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/wonka/-/wonka-2.0.1.tgz#3769f9b050683edf2280e04d2b01afbdfe5fd9d4"
+  dependencies:
+    bs-rebel "^0.2.3"
 
 wordwrap@~0.0.2:
   version "0.0.3"
